@@ -1,0 +1,144 @@
+
+
+/* Add background color to entire page*/
+
+body {
+    background-color: lightgray;
+}
+
+/*Style main header area*/
+
+.mainHeader{
+    background-image: url('https://gdurl.com/G1AR');
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainHeader h1{
+    color: white;
+    font-family: cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+.mainHeader h2{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+/* Styling Image Div Area*/
+
+#img-div {
+    margin-top: 15px;
+    background-color: lightgray;
+}
+#image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+#img-div figcaption{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*Style Tirbute Information Section*/
+
+#tribute-info h3{
+    text-align: center;
+    font-size: 25px;
+}
+#tribute-info ul{
+    line-height: 1.5;
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+#tribute-info li{
+    margin: 0 20px;
+
+}
+
+
+/*Styling of the quote blocks at page bottom*/
+
+#quote-blocks h3{
+    text-align: center;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#quote-blocks{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    grid-template-areas:  
+    "title title title"
+    "q1 q2 q3";
+}
+
+#quoteheader{
+    grid-area: title;
+}
+
+#quoteone{
+    grid-area: "q1";
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    box-shadow: 5px 5px darkslategray;
+}
+
+#quotetwo{
+    grid-area: "q2";
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    box-shadow: 5px 5px darkslategray;
+}
+
+#quotethree{
+    grid-area: "q3";
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    box-shadow: 5px 5px darkslategray;
+}
+
+#quote-blocks li{
+    padding: 10px 0px 10px 0px 
+}
+@media only screen and (max-width: 1000px){
+    #quote-blocks{
+        display: grid;
+        grid-template-columns:  1fr;
+        grid-gap: 5px;
+        grid-template-areas:  
+        "title"
+        "q1" 
+        "q2"
+        "q3";
+    }
+
+}
+
+#quote-blocks p{
+    font-size: 15px;
+}
+
+/* Link out to more information about him*/
+
+.bottom-link {
+    text-align: center;
+    font-size: 20px;
+}
