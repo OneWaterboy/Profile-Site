@@ -48,6 +48,7 @@ hr{
     padding: 10px;
     background-color: white;
     margin: 10px;
+    padding-inline-start: 0px
 }
 
 .main-nav a:hover {
@@ -189,6 +190,21 @@ footer a{
 /*=======================================
     @media Queries for Responsive Design
 ========================================*/
+
+
+/* For screens 360 px and under of a screen size, the name was stacking in the footer. 
+The adjustments seem to have fixed the issue*/
+@media(max-width: 360px){
+    .name{
+        font-size: 0.5em;
+        padding-top: 15px;
+    }
+    .top{
+        font-size: 0.5em;
+        padding-top: 0;
+    }
+}
+
 
 @media(max-width: 768px){
     .footer-nav{
