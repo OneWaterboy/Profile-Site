@@ -1,0 +1,409 @@
+/*=====================
+    General Styling
+ =====================*/
+
+body{
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    color: #3a3a3a;
+}
+
+a {
+    text-decoration: none;
+}
+
+*  {
+    box-sizing: border-box;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-top: 35px;
+}
+
+hr{
+    width: 90%;
+    text-align: center;
+    opacity: 50;
+    margin-top: 50px;
+}
+
+/*=====================
+    Navigation Styles
+======================*/
+
+.main-nav{
+    list-style: none;
+}
+.main-nav a {
+	font-size: 1.25em;
+	color: darkblue;
+    text-transform: uppercase;
+    text-align: center; 
+    display: block;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+}
+
+.main-nav a:hover {
+	color: #093a58;
+}
+
+.main-nav, 
+.name a:visited {
+    color: darkblue
+}
+
+.name {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/*===========================
+Intro Banner Styling
+============================*/
+
+.banner{
+    justify-content: center;
+    text-align: center;
+}
+
+.banner p {
+    line-height: 1.5em;
+    font-size: 1.25em;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.profile-photo{
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 50%;
+    
+}
+
+/*========================
+    Profile Area Styling
+=========================*/
+
+.container {
+    background-color: white;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.project{
+    text-align: center;
+    max-width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    vertical-align: top;
+    /*margin-bottom: 40px;*/
+}
+
+.project img{
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.project-title{
+    font-weight: 400;
+}
+
+.project-description{
+    max-width:100%;
+    margin: 0 auto;
+}
+
+/*========================
+    Contact Area Styling
+==========================*/
+
+.contact-info{
+    text-align: center;
+    margin: 50px auto;
+    max-width: 75%;
+    font-size: 1.25em;
+}
+
+.contact-details{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 75%;
+    line-height: 40px;
+    font-size: 1.25em;
+}
+
+/*=============================
+    Footer Area Styling
+==============================*/
+
+.footer-name{
+    
+    margin-top: 0px;
+    max-width: 50%;
+    float: left;
+}
+footer a{
+    color: black;
+}
+.footer-name a{
+    font-size: 0.5em;
+    color: black;
+}
+
+.footer-name a:visited{
+    color: black;
+}
+
+.top{
+    float: right;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-top: 15px;
+
+}
+
+.top a:visited{
+    color: black;
+}
+
+.wrapper{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+/*=======================================
+    @media Queries for Responsive Design
+========================================*/
+
+@media(max-width: 768px){
+    .footer-nav{
+        visibility: hidden;
+    }
+    .top{
+        visibility: visible;
+    }
+}
+    
+
+@media(min-width:768px){
+    .footer-nav{
+        visibility: visible;
+    }    
+    .wrapper{
+        display: inline;
+        margin: 0 auto;
+    }
+    .top{
+        display: none;
+    }
+    .name{
+        padding-left: 40px;
+    }
+    .main-nav{
+        text-align: center;
+        margin-top: 0;
+    }
+    
+    .main-nav li {
+        font-size: 1em;
+        color: darkblue;
+        text-transform: uppercase;
+        text-align: center; 
+        display: inline-block;
+        padding: 10px;
+        margin: 0 auto;
+        
+    }
+    .banner{
+        display: inline-block;
+        padding-bottom: 30px;
+    }
+
+    .introduction{
+        max-width: 100%;   
+    }
+
+    .profile-photo{
+        max-width: 40%;
+        float: right;
+        margin: 20px 60px;
+       
+    }
+
+    .main-nav a {
+        background-color: whitesmoke;
+        
+    }
+
+    .container{
+        text-align: center;
+    }
+    .project{
+        width: 45%;
+        display: inline-block;
+        margin: 30px auto;
+        
+    }
+    .project img{
+        margin: 0 auto;
+        max-width: 95%;
+    }
+
+    .top{
+        display: none;
+    }
+
+    
+    .footer-nav{
+        list-style: none;
+    }
+
+    .footer-nav a {
+        font-size: 1em;
+        font-weight: 800;
+        color: black;
+        text-transform: uppercase;
+        text-align: center; 
+        padding: 20px;
+        float: right;
+        max-width: 50%;
+        margin-right: 30px;
+        
+    }
+    
+    .footer-nav a:hover {
+        color: #000000;
+    }
+    
+    .footer-nav  a:visited {
+        color: black
+    }
+    .footer-name{
+        margin-top: 5px;
+        font-size: 2em;
+    }
+    .footer-name a:visited{
+        color: black;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+        .top{
+            display: none;
+        }
+
+        .main-header{
+            display: inline;
+        }
+        .main-nav{
+            margin-top: 0;
+            float: right;
+            max-width: 70%;
+            text-align: right;
+        }
+        
+        .main-nav li {
+            font-size: 1em;
+            color: darkblue;
+            text-transform: uppercase;
+            text-align: center; 
+            padding: 10px; 
+        }
+
+        .name{
+            float: left;
+            max-width: 30%;
+            font-size: 1.5em;
+            margin-left: 20px ;
+        }
+        .banner{
+            display: inline-block;
+            padding-bottom: 30px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+    
+        .introduction{
+            max-width: 100%;
+            padding-top: 100px;
+            
+            
+        }
+    
+        .profile-photo{
+            max-width: 40%;
+            float: right;
+            margin: 20px 60px;
+           
+        }
+    
+        .main-nav a {
+            background-color: whitesmoke;
+            
+        }
+    
+        .container{
+            text-align: center;
+            max-width: 95%;
+        }
+        .project{
+            max-width: 30%;
+            display: inline-block;
+            margin: 30px auto;
+            
+        }
+        .project img{
+            margin: 0 auto;
+            max-width: 95%;
+        }
+    
+        .top{
+            display: none;
+        }
+        .footer-nav{
+            list-style: none;
+        }
+    
+        .footer-nav a {
+            font-size: 1em;
+            font-weight: 800;
+            color: black;
+            text-transform: uppercase;
+            text-align: center; 
+            padding: 20px;
+            float: right;
+            max-width: 50%;
+            
+        }
+        
+        .footer-nav a:hover {
+            color: #000000;
+        }
+        
+        .footer-nav  a:visited {
+            color: black
+        }
+        .footer-name a{
+            font-size: 0.75em;
+            color: black;
+        }
+        
+    
+}
