@@ -2,7 +2,7 @@
     General Styling
  =====================*/
 
-body{
+ body{
     background-color: whitesmoke;
     font-family: 'Roboto', sans-serif;
     color: #3a3a3a;
@@ -120,13 +120,27 @@ Intro Banner Styling
 }
 
 .project-title{
-    font-weight: 400;
+    font-family: 'Commissioner', sans-serif;
+
 }
 
 .project-description{
     max-width:100%;
     margin: 0 auto;
 }
+
+/*========================
+    About Me Styling
+==========================*/
+
+.about-section{
+    max-width: 90%;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    font-style: italic;
+    margin: 0 auto;
+}
+
 
 /*========================
     Contact Area Styling
@@ -193,7 +207,7 @@ footer a{
 
 
 /* For screens 360 px and under of a screen size, the name was stacking in the footer. 
-The adjustments seem to have fixed the issue*/
+The adjustments seems to have fixed the issue for most devices*/
 @media(max-width: 360px){
     .name{
         font-size: 0.5em;
