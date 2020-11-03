@@ -28,7 +28,7 @@ a {
 hr{
     width: 90%;
     text-align: center;
-    opacity: 50;
+    opacity: 0.5;
     margin-top: 50px;
 }
 
@@ -48,8 +48,8 @@ hr{
     padding: 10px;
     background-color: white;
     margin: 10px;
-    padding-inline-start: 0px
 }
+
 
 .main-nav a:hover {
 	color: #093a58;
@@ -66,6 +66,7 @@ hr{
     text-transform: uppercase;
     margin-top: 30px;
     margin-bottom: 10px;
+    font-size: 2em;
 }
 
 /*===========================
@@ -75,6 +76,8 @@ Intro Banner Styling
 .banner{
     justify-content: center;
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .banner p {
@@ -89,8 +92,13 @@ Intro Banner Styling
 .profile-photo{
     border-radius: 10px;
     margin: 30px auto;
-    max-width: 50%;
+    max-width: 80%;
     
+}
+
+.profile-photo img{
+    max-width: 80%;
+    border-radius: 20%;
 }
 
 /*========================
@@ -141,7 +149,6 @@ Intro Banner Styling
     margin: 0 auto;
 }
 
-
 /*========================
     Contact Area Styling
 ==========================*/
@@ -149,7 +156,7 @@ Intro Banner Styling
 .contact-info{
     text-align: center;
     margin: 50px auto;
-    max-width: 75%;
+    max-width: 95%;
     font-size: 1.25em;
 }
 
@@ -158,25 +165,22 @@ Intro Banner Styling
     margin: 0 auto;
     max-width: 75%;
     line-height: 40px;
-    font-size: 1.25em;
+    font-size: 1em;
 }
-
+/*
 /*=============================
     Footer Area Styling
 ==============================*/
 
-.footer-name{
-    
-    margin-top: 0px;
-    max-width: 50%;
-    float: left;
-}
 footer a{
     color: black;
 }
-.footer-name a{
-    font-size: 0.5em;
+.footer-name{
+    font-size: 0.9em;
     color: black;
+    max-width: 50%;
+    font-weight: bold;
+    float: left;
 }
 
 .footer-name a:visited{
@@ -184,10 +188,12 @@ footer a{
 }
 
 .top{
-    float: right;
-    font-size: 1em;
+    text-align: right;
+    font-size: 0.9em;
     text-transform: uppercase;
-    margin-top: 15px;
+    max-width: 50%;
+    font-weight: bold;
+    float: right;
 
 }
 
@@ -195,94 +201,58 @@ footer a{
     color: black;
 }
 
-.wrapper{
-    max-width: 80%;
+footer {
+    max-width: 95%;
     margin: 0 auto;
+}
+.footer-nav{
+    visibility: hidden;
+    width: 0;
+    height: 0;
 }
 
 
 /*=======================================
     @media Queries for Responsive Design
 ========================================*/
-
-
-/* For screens 360 px and under of a screen size, the name was stacking in the footer. 
-The adjustments seems to have fixed the issue for most devices*/
-@media(max-width: 360px){
-    .name{
-        font-size: 0.5em;
-        padding-top: 15px;
-    }
-    .top{
-        font-size: 0.5em;
-        padding-top: 0;
-    }
-}
-
-
-@media(max-width: 768px){
-    .footer-nav{
-        visibility: hidden;
-    }
-    .top{
-        visibility: visible;
-    }
-}
     
 
 @media(min-width:768px){
-    .footer-nav{
-        visibility: visible;
-    }    
-    .wrapper{
-        display: inline;
-        margin: 0 auto;
-    }
-    .top{
-        display: none;
-    }
-    .name{
-        padding-left: 40px;
-    }
-    .main-nav{
-        text-align: center;
-        margin-top: 0;
-    }
-    
-    .main-nav li {
-        font-size: 1em;
-        color: darkblue;
-        text-transform: uppercase;
-        text-align: center; 
-        display: inline-block;
-        padding: 10px;
-        margin: 0 auto;
-        
-    }
-    .banner{
-        display: inline-block;
-        padding-bottom: 30px;
-    }
-
-    .introduction{
-        max-width: 100%;   
-    }
-
-    .profile-photo{
-        max-width: 40%;
-        float: right;
-        margin: 20px 60px;
-       
-    }
 
     .main-nav a {
         background-color: whitesmoke;
         
     }
 
+    .main-nav li {
+        display: inline-block;
+       
+    }
+    .main-nav{
+        justify-content: center;
+        display: flex;
+        margin-top: 15px;
+    }
+
+    .banner{
+        display: inline-block;
+        align-content: center;
+        justify-content: center;
+        max-width: 95%;
+    }
+    .profile-photo{
+        float: right;
+        max-width: 50%;
+    }
+    .introduction {
+        float: left;
+        max-width: 50%;
+        
+    }
     .container{
         text-align: center;
     }
+    
     .project{
         width: 45%;
         display: inline-block;
@@ -294,146 +264,51 @@ The adjustments seems to have fixed the issue for most devices*/
         max-width: 95%;
     }
 
-    .top{
-        display: none;
+    .contact-details {
+        font-size: 1.25em;
     }
-
-    
-    .footer-nav{
-        list-style: none;
+    .top {
+        visibility: hidden;
+        width: 0;
+        height: 0;
     }
-
-    .footer-nav a {
-        font-size: 1em;
-        font-weight: 800;
-        color: black;
-        text-transform: uppercase;
-        text-align: center; 
-        padding: 20px;
-        float: right;
-        max-width: 50%;
-        margin-right: 30px;
-        
-    }
-    
-    .footer-nav a:hover {
-        color: #000000;
-    }
-    
-    .footer-nav  a:visited {
-        color: black
+    .footer {
+        max-width: 80%;
     }
     .footer-name{
-        margin-top: 5px;
-        font-size: 2em;
+        float: left;
+        font-size: 1.25em;
     }
-    .footer-name a:visited{
-        color: black;
+    .footer-nav li{
+        display: inline-block;
+        padding-right: 10px;
+        margin-top: 15px;
     }
-
+    .footer-nav {
+        visibility: visible;
+        float: right;
+        width: auto;
+        height: auto;
+        font-size: 1.25em;
+        font-weight: bold;
+       
+    }
 }
 
-@media (min-width: 1024px) {
+@media(min-width: 1024px){
 
-        .top{
-            display: none;
-        }
-
-        .main-header{
-            display: inline;
-        }
-        .main-nav{
-            margin-top: 0;
-            float: right;
-            max-width: 70%;
-            text-align: right;
-        }
-        
-        .main-nav li {
-            font-size: 1em;
-            color: darkblue;
-            text-transform: uppercase;
-            text-align: center; 
-            padding: 10px; 
-        }
-
-        .name{
-            float: left;
-            max-width: 30%;
-            font-size: 1.5em;
-            margin-left: 20px ;
-        }
-        .banner{
-            display: inline-block;
-            padding-bottom: 30px;
-            margin-top: 40px;
-            justify-content: center;
-        }
-    
-        .introduction{
-            max-width: 100%;
-            padding-top: 100px;
-            
-            
-        }
-    
-        .profile-photo{
-            max-width: 40%;
-            float: right;
-            margin: 20px 60px;
-           
-        }
-    
-        .main-nav a {
-            background-color: whitesmoke;
-            
-        }
-    
-        .container{
-            text-align: center;
-            max-width: 95%;
-        }
-        .project{
-            max-width: 30%;
-            display: inline-block;
-            margin: 30px auto;
-            
-        }
-        .project img{
-            margin: 0 auto;
-            max-width: 95%;
-        }
-    
-        .top{
-            display: none;
-        }
-        .footer-nav{
-            list-style: none;
-        }
-    
-        .footer-nav a {
-            font-size: 1em;
-            font-weight: 800;
-            color: black;
-            text-transform: uppercase;
-            text-align: center; 
-            padding: 20px;
-            float: right;
-            max-width: 50%;
-            
-        }
-        
-        .footer-nav a:hover {
-            color: #000000;
-        }
-        
-        .footer-nav  a:visited {
-            color: black
-        }
-        .footer-name a{
-            font-size: 0.75em;
-            color: black;
-        }
-        
+    .name{
+        float: left;
+    }
+    .main-nav{
+        float: right;
+    }
+    nav {
+        margin-left: 15px;
+        margin-right: 20px;
+    }
+    .project{
+        max-width: 30%;
+    }
     
 }
