@@ -92,7 +92,7 @@ header .profile-image:hover {
   color: yellow;
 }
 .card {
-  margin-top: 30px;
+  margin: 0 auto;
   padding: 20px 40px 40px;
   max-width: 500px;
   height: 500px;
@@ -258,7 +258,7 @@ a.social:hover {
       display: flex; 
       max-width: 1200px;
       -ms-flex-pack: distribute;
-      justify-content: space-around;
+      justify-content: center;
       margin: 0 auto;
   }
 
