@@ -26,30 +26,13 @@ a:hover {
 
 .mainNav {
   width: 100%;
-  min-height: 30px;
+  
   padding: 10px;
   position: fixed;
   top: 0px;
   text-align: center;
   z-index: 1000;
-  background-color: transparent;
-}
-
-.changeColor {
-  width: 100%;
-  min-height: 30px;
-  padding: 10px;
-  position: fixed;
-  top: 0px;
-  text-align: center;
-  z-index: 1000;
-  background-color: black;
-}
-
-.nav-colored { background-color:#000; 
-}
-
-.nav-transparent { background-color:transparent;
+  transition: background 0.5s;
 }
 
 .nav {
@@ -65,7 +48,7 @@ a:hover {
 
 .name {
   font-family: 'Sedgwick Ave Display', cursive;
-  font-size: 3rem;
+  font-size: 2rem;
   display: block;
   margin-right: auto;
   color: white;
@@ -107,9 +90,8 @@ header {
   display: flex;
   align-items: center;
 }
-header .profile-image {
-  margin-top: 10vh;
-  width: 20%;
+.profile-image {
+  max-width: 100%;
   height: auto;
   border-radius: 40%;
   border: 3px solid whitesmoke;
@@ -227,6 +209,20 @@ a.social:hover {
 
 .home-header {
   color: whitesmoke;
+}
+
+.home-welcome {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 50%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.hire-me-button {
+  height: 6vh;
+  width: 30vw;
+  font-size: 1.5rem;
 }
 /* ===============================================
          Project Card Page Styling 

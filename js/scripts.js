@@ -2,12 +2,15 @@
 
 // Change navbar color on scroll
 
-$(function() {
-    $(window).scroll(function () {
-       if ($(this).scrollTop() > 0) {
-          $(".mainNav").addClass(".changeColor")
-       } else {
-          $(".mainNav").removeClass(".changeColor")
-       }
-    });
- });
+$(document).ready(function(){
+	$(window).on("scroll",function(){
+  	var navChange = $(window).scrollTop();
+    if(navChange > 150){
+        $(".mainNav").css("background","rgba(0,0,0)");
+    }
+    else{
+    	$(".mainNav").css("background","rgba(0,0,0,0)");
+    }
+  });
+});
+
