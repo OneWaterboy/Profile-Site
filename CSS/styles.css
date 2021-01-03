@@ -16,10 +16,12 @@ body {
 a {
   color: darkgreen;
   text-decoration: none;
+  
 }
 
 a:hover {
   color: rgb(18, 2, 121, 0.5);
+  transition: all 0.4s;
 }
 
 /* Section Styles */
@@ -321,6 +323,23 @@ a.social:hover {
     height: 40vh;
     
   }
+}
+@media screen and (max-width: 768px){
 
+  .nav-link {
+    display: none;
+  }
+  .home-welcome {
+    margin-left: 2vw;
+    margin-top: 20vh;
+  }
+}
 
+@media screen and (max-width: 481px){
+
+  .profile-image {
+    height: 30vh;
+  }
+    
+  }
 }
