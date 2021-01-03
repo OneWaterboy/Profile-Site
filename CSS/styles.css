@@ -23,15 +23,26 @@ a:hover {
 
 /* Section Styles */
 
-.main-nav {
+.mainNav {
   width: 100%;
-  background: black;
   min-height: 30px;
   padding: 10px;
   position: fixed;
+  top: 0px;
   text-align: center;
   z-index: 1000;
 }
+
+.changeColor {
+  background-color: black;
+}
+
+.nav-colored { background-color:#000; 
+}
+
+.nav-transparent { background-color:transparent;
+}
+
 .nav {
   display: flex;
   justify-content: space-around;
@@ -41,16 +52,25 @@ a:hover {
   padding: 0;
 }
 
-.nav .name {
-    display: block;
-    margin-right: auto;
-    color: white;
-    font-size: 1.2em;
+
+.name {
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 3rem;
+  display: block;
+  margin-right: auto;
+  color: white;
+
 }
 .nav li {
   padding: 5px 10px 10px 10px;
-  font-size: 1.2em;
+
 }
+
+.nav-link {
+  font-family: 'Staatliches', cursive;
+  font-size: 1.7rem;
+}
+
 .nav a {
   transition: all .5s;
 }
@@ -63,21 +83,19 @@ header {
   background: url('../images/header\ sunrise.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
-  padding-top: 60px;
+  height: 100vh;
 }
-header {
-  line-height: 1.5;
-}
+
 header .profile-image {
-  margin-top: 50px;
-  width: 150px;
-  height: 150px;
+  margin-top: 10vh;
+  width: 20%;
+  height: auto;
   border-radius: 40%;
   border: 3px solid whitesmoke;
   transition: all .5s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) rotate(360deg);
 }
 .tag {
   background-color: #efefef;
@@ -178,8 +196,9 @@ a.social:hover {
   clear: both;
 }
 
-
-/* Project Card Styling Page Styling */
+/* ===============================================
+         Project Card Page Styling 
+=================================================*/
 
 .project-header{
   background: url('../images/codeHeader.jpg');
