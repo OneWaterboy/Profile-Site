@@ -14,11 +14,12 @@ body {
 /* Link Styles */
 
 a {
+  color: darkgreen;
   text-decoration: none;
-  color: whitesmoke;
 }
+
 a:hover {
-  color: darkslateblue;
+  color: rgb(18, 2, 121, 0.5);
 }
 
 /* Section Styles */
@@ -31,9 +32,17 @@ a:hover {
   top: 0px;
   text-align: center;
   z-index: 1000;
+  background-color: transparent;
 }
 
 .changeColor {
+  width: 100%;
+  min-height: 30px;
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  text-align: center;
+  z-index: 1000;
   background-color: black;
 }
 
@@ -50,6 +59,7 @@ a:hover {
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
+  
 }
 
 
@@ -69,14 +79,21 @@ a:hover {
 .nav-link {
   font-family: 'Staatliches', cursive;
   font-size: 1.7rem;
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 .nav a {
   transition: all .5s;
 }
+
 .nav a:hover {
-  color: white
+  color: rgb(6, 9, 143);
 }
+
+
+/* Header area*/
+
 
 header {
   text-align: center;
@@ -86,6 +103,10 @@ header {
   height: 100vh;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+}
 header .profile-image {
   margin-top: 10vh;
   width: 20%;
@@ -95,7 +116,7 @@ header .profile-image {
   transition: all .5s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(360deg);
+  transform: scale(1.5) rotate(360deg);
 }
 .tag {
   background-color: #efefef;
@@ -105,10 +126,7 @@ header .profile-image:hover {
   display: table;
   margin: 10px auto;
 } 
-.location {
-  background-color: #222;
-  color: yellow;
-}
+
 .card {
   margin: 0 auto;
   padding: 20px 40px 40px;
@@ -196,6 +214,20 @@ a.social:hover {
   clear: both;
 }
 
+
+/* ===============================================
+         Home Page Styling 
+=================================================*/
+
+.home-intro {
+  max-width: 60%;
+  font-weight: bold;
+  margin: 50px auto;
+}
+
+.home-header {
+  color: whitesmoke;
+}
 /* ===============================================
          Project Card Page Styling 
 =================================================*/
