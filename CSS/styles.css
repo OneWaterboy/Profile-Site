@@ -223,9 +223,14 @@ a.social:hover {
   height: 6vh;
   width: 30vw;
   font-size: 1.5rem;
+  border-radius: 10px;
+  color:  whitesmoke;
+  background-color: darkblue;
 }
+
+
 /* ===============================================
-         Project Card Page Styling 
+         Project Page Styling 
 =================================================*/
 
 .project-header{
