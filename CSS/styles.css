@@ -28,7 +28,6 @@ a:hover {
 
 .mainNav {
   width: 100%;
-  
   padding: 10px;
   position: fixed;
   top: 0px;
@@ -44,9 +43,14 @@ a:hover {
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
-  
+  max-width: 80%;
 }
 
+.menu-icon-yellow {
+  display: none;
+  max-height: 100%;
+  width: auto;
+}
 
 .name {
   font-family: 'Sedgwick Ave Display', cursive;
@@ -79,16 +83,13 @@ a:hover {
 
 /* Header area*/
 
-
-header {
+.page-header {
   text-align: center;
-  background: url('../images/header\ sunrise.jpg') no-repeat top center ;
-  background-size: cover;
   overflow: hidden;
   height: 100vh;
 }
 
-.header-content {
+.page-header {
   display: flex;
   align-items: center;
 }
@@ -203,6 +204,11 @@ a.social:hover {
          Home Page Styling 
 =================================================*/
 
+.home {
+  background: url('../images/header\ sunrise.jpg') no-repeat top center;
+  background-size: cover;
+}
+
 .home-intro {
   max-width: 60%;
   font-weight: bold;
@@ -224,7 +230,7 @@ a.social:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-width: 60vw;
-  margin: 0 auto;
+  margin: 50vh auto;
   align-items: center;
 }
 
@@ -249,21 +255,9 @@ a.social:hover {
          Project Page Styling 
 =================================================*/
 
-.project-header{
+.projects {
   background: url('../images/codeHeader.jpg');
-}
-
-.project-tag {
-  background-color: #efefef;
-  color: whitesmoke;
-  padding: 10px;
-  border-radius: 5px;
-  display: table;
-  margin: 10px auto;
-} 
-.project-tagline {
-  background-color: whitesmoke;
-  color: darkgreen;
+  background-size: cover;
 }
 
 .card-image{
@@ -326,20 +320,42 @@ a.social:hover {
 }
 @media screen and (max-width: 768px){
 
+  .home-welcome {
+    margin-left: 2vw;
+  }
+  
+  .nav {
+    max-width: 100%;
+  }
+  
+  
+}
+
+@media screen and (max-width: 600px) {
+
   .nav-link {
     display: none;
   }
-  .home-welcome {
-    margin-left: 2vw;
-    margin-top: 20vh;
+  .menu-icon-yellow{
+    display: flex;
+  }
+  .name {
+    margin: 0 auto;
+  }
+  .home-header {
+    font-size: 1.5rem;
+  }
+  .sub-header {
+    font-size: 0.8rem;
   }
 }
 
 @media screen and (max-width: 481px){
 
   .profile-image {
-    height: 30vh;
+    height: 20vh;
   }
-    
+  .name {
+    font-size: 1.5rem;
   }
 }
