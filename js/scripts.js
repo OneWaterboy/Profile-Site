@@ -14,3 +14,15 @@ $(document).ready(function(){
   });
 });
 
+
+//Create Hamburger Drop Down
+
+var dropDownMenu = document.querySelector(".navbar")
+var hideMenu = document.querySelector(".ham")
+
+ham.addEventListener("click", toggleHamburger)
+
+function toggleHamburger(){
+    navbar.classList.toggle("showNav")
+    ham.classList.toggle("showClose")
+  }
