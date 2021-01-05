@@ -102,17 +102,6 @@ header .profile-image:hover {
   transform: scale(1.5) rotate(360deg);
 }
 
-.card {
-  margin: 0 auto;
-  padding: 20px 40px 40px;
-  max-width: 500px;
-  height: 500px;
-  text-align: left;
-  background: #fff;
-  border-bottom: 8px solid #ccc;
-  border-radius: 6px;
-  transition: all .5s;
-}
 
 footer {
   width: 100%;
@@ -223,9 +212,9 @@ a.social:hover {
 
 .project-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2vh;
-  max-width: 90%;
+  grid-template-columns: repeat(auto, 1fr);
+  row-gap: 2vh;
+  max-width: 60%;
   margin: 10vh auto;
 }
 
@@ -250,11 +239,12 @@ a.social:hover {
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.9);
   overflow: hidden;
   width: 100%;
   height: 0;
   transition: .5s ease;
+  margin: 0 auto
 }
 
 .project-card:hover .project-overlay {
@@ -262,30 +252,37 @@ a.social:hover {
   height: 100%;
 }
 
+.overlay-contents {
+  height: auto;
+  width: auto;
+  margin: 15% auto;
+}
+
 .project-description {
   margin: 0 auto;
   color: whitesmoke;
+  font-size: 1.5vw;
   width: 80%;
 }
 
 .project-link {
-  color: whitesmoke;
-  font-size: 1rem;
+  color: gold;
+  font-size: 1.3rem;
   text-decoration: none;
 }
 
 .project-link:hover {
-  text-decoration: underline;
-  text-decoration-color: darkgray;
+  color:whitesmoke;
+  text-decoration: none;
 }
 
 .project-link:hover::before{
   content: '< ';
-  color: darkgray;
+  color: green;
 }
 .project-link:hover::after {
   content: ' />';
-  color: darkgray;
+  color: green;
 }
 
 .project-page-header {
@@ -322,6 +319,18 @@ a.social:hover {
     width: auto;
     height: 40vh;
     
+  }
+
+  .overlay-contents {
+    margin: 0 auto;
+  }
+
+  .project-description {
+    font-size: 2vw;
+  }
+
+  .project-link {
+    font-size: 2vw;
   }
 }
 @media screen and (max-width: 768px){

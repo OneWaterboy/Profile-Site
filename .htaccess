@@ -1,0 +1,1645 @@
+
+text/x-generic .htaccess ( UTF-8 Unicode English text )
+RewriteEngine on
+
+
+# Force HTTPS and WWW 
+RewriteCond %{HTTP_HOST} !^www\.(.*)$ [OR,NC]
+RewriteCond %{https} off  
+RewriteRule ^(.*)$ https://www.hike2hike.com/$1 [R=301,L]
+
+# Remove trailing slash from non-filepath urls
+RewriteCond %{REQUEST_URI} ^/(.+)/$
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/%1\.html  -f
+RewriteRule ^(.*)$ https://www.hike2hike.com/%1 [R=301,L]
+
+# Include trailing slash on the directory 
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+)$ https://www.hike2hike.com/$1/ [R=301,L]
+
+
+
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^pct\-j\-day\-4\-section$ "https\:\/\/hike2hike\.com\/pct\-section\-j\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^pct\-j\-day\-4\-section\.html$ "https\:\/\/hike2hike\.com\/pct\-section\-j\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^pct\-j\-day\-3\-section$ "https\:\/\/hike2hike\.com\/pct\-section\-j\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^pct\-j\-day\-3\-section\.html$ "https\:\/\/hike2hike\.com\/pct\-section\-j\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^pct\-j\-day\-2\-section$ "https\:\/\/hike2hike\.com\/pct\-section\-j\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^pct\-j\-day\-2\-section\.html$ "https\:\/\/hike2hike\.com\/pct\-section\-j\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^parkbuttetrips$ "https\:\/\/hike2hike\.com\/park\-butte\-fire\-lookout\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^parkbuttetrips\.html$ "https\:\/\/hike2hike\.com\/park\-butte\-fire\-lookout\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^park\-butte$ "https\:\/\/hike2hike\.com\/park\-butte\-fire\-lookout\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^park\-butte\.html$ "https\:\/\/hike2hike\.com\/park\-butte\-fire\-lookout\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^park\-butte\-day\-hikes$ "https\:\/\/hike2hike\.com\/park\-butte\-fire\-lookout\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^park\-butte\-day\-hikes\.html$ "https\:\/\/hike2hike\.com\/park\-butte\-fire\-lookout\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^park\-butte\-6152015$ "https\:\/\/hike2hike\.com\/park\-butte\-fire\-lookout\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^park\-butte\-6152015\.html$ "https\:\/\/hike2hike\.com\/park\-butte\-fire\-lookout\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^oysterdome222018$ "https\:\/\/hike2hike\.com\/oyster\-dome\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^oysterdome222018\.html$ "https\:\/\/hike2hike\.com\/oyster\-dome\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^oysterdome5519$ "https\:\/\/hike2hike\.com\/oyster\-dome\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^oysterdome5519\.html$ "https\:\/\/hike2hike\.com\/oyster\-dome\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^oyster\-dome$ "https\:\/\/hike2hike\.com\/oyster\-dome\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^oyster\-dome\.html$ "https\:\/\/hike2hike\.com\/oyster\-dome\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^oyster\-dome\-lizard\-and\-lilly\-lake$ "https\:\/\/hike2hike\.com\/oyster\-dome\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^oyster\-dome\-lizard\-and\-lilly\-lake\.html$ "https\:\/\/hike2hike\.com\/oyster\-dome\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^oyster\-dome\-4\-6\-2015$ "https\:\/\/hike2hike\.com\/oyster\-dome\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^oyster\-dome\-4\-6\-2015\.html$ "https\:\/\/hike2hike\.com\/oyster\-dome\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^north\-twin\-sister1$ "https\:\/\/hike2hike\.com\/north\-twin\-sister\-west\-ridge\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^north\-twin\-sister1\.html$ "https\:\/\/hike2hike\.com\/north\-twin\-sister\-west\-ridge\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^north\-twin\-sister$ "https\:\/\/hike2hike\.com\/north\-twin\-sister\-west\-ridge\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^north\-twin\-sister\.html$ "https\:\/\/hike2hike\.com\/north\-twin\-sister\-west\-ridge\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^north\-twin\-sister\-9\-3\-18$ "https\:\/\/hike2hike\.com\/north\-twin\-sister\-west\-ridge\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^north\-twin\-sister\-9\-3\-18\.html$ "https\:\/\/hike2hike\.com\/north\-twin\-sister\-west\-ridge\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mthoodpearlygates$ "https\:\/\/hike2hike\.com\/mt\-hood\-pearly\-gates\-hogsback\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mthoodpearlygates\.html$ "https\:\/\/hike2hike\.com\/mt\-hood\-pearly\-gates\-hogsback\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mtbakereastonroute\-853273\-463497$ "https\:\/\/hike2hike\.com\/mt\-baker\-easton\-glacier\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mtbakereastonroute\-853273\-463497\.html$ "https\:\/\/hike2hike\.com\/mt\-baker\-easton\-glacier\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mtbakereastonday2$ "https\:\/\/hike2hike\.com\/mt\-baker\-easton\-glacier\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mtbakereastonday2\.html$ "https\:\/\/hike2hike\.com\/mt\-baker\-easton\-glacier\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mtbakerclimbs$ "https\:\/\/hike2hike\.com\/mt\-baker\-easton\-glacier\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mtbakerclimbs\.html$ "https\:\/\/hike2hike\.com\/mt\-baker\-easton\-glacier\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mt\-pugh\-7201\-ft$ "https\:\/\/hike2hike\.com\/mount\-pugh\-hike\-scramble\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mt\-pugh\-7201\-ft\.html$ "https\:\/\/hike2hike\.com\/mount\-pugh\-hike\-scramble\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mt\-margaret$ "https\:\/\/hike2hike\.com\/whittier\-ridge\-lakes\-loop\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mt\-margaret\.html$ "https\:\/\/hike2hike\.com\/whittier\-ridge\-lakes\-loop\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountwhitneyclimbday3$ "https\:\/\/hike2hike\.com\/climbing\-mount\-whitney\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountwhitneyclimbday3\.html$ "https\:\/\/hike2hike\.com\/climbing\-mount\-whitney\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountwhitneyclimbday2$ "https\:\/\/hike2hike\.com\/climbing\-mount\-whitney\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountwhitneyclimbday2\.html$ "https\:\/\/hike2hike\.com\/climbing\-mount\-whitney\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountwhitneyclimb$ "https\:\/\/hike2hike\.com\/climbing\-mount\-whitney\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountwhitneyclimb\.html$ "https\:\/\/hike2hike\.com\/climbing\-mount\-whitney\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountsitrail$ "https\:\/\/hike2hike\.com\/mount\-si\-hike\-trail\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountsitrail\.html$ "https\:\/\/hike2hike\.com\/mount\-si\-hike\-trail\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountpilchuck$ "https\:\/\/hike2hike\.com\/mount\-pilchuck\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountpilchuck\.html$ "https\:\/\/hike2hike\.com\/mount\-pilchuck\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountjeffersonoregon$ "https\:\/\/hike2hike\.com\/mt\-jefferson\-southwest\-ridge\-oregon\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountjeffersonoregon\.html$ "https\:\/\/hike2hike\.com\/mt\-jefferson\-southwest\-ridge\-oregon\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountforgotten$ "https\:\/\/hike2hike\.com\/mount\-forgotten\-scramble\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountforgotten\.html$ "https\:\/\/hike2hike\.com\/mount\-forgotten\-scramble\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountadamssouthclimb$ "https\:\/\/hike2hike\.com\/mount\-adams\-south\-climb\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mountadamssouthclimb\.html$ "https\:\/\/hike2hike\.com\/mount\-adams\-south\-climb\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mount\-whittier\-and\-the\-whittier\-ridge$ "https\:\/\/hike2hike\.com\/whittier\-ridge\-lakes\-loop\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mount\-whittier\-and\-the\-whittier\-ridge\.html$ "https\:\/\/hike2hike\.com\/whittier\-ridge\-lakes\-loop\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^montecristotownsite$ "https\:\/\/hike2hike\.com\/monte\-cristo\-hike\-ghost\-town\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^montecristotownsite\.html$ "https\:\/\/hike2hike\.com\/monte\-cristo\-hike\-ghost\-town\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^montecristosnowshoe$ "https\:\/\/hike2hike\.com\/monte\-cristo\-snowshoe\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^montecristosnowshoe\.html$ "https\:\/\/hike2hike\.com\/monte\-cristo\-snowshoe\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mailboxpeak$ "https\:\/\/hike2hike\.com\/mailbox\-peak\-old\-new\-loop\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mailboxpeak\.html$ "https\:\/\/hike2hike\.com\/mailbox\-peak\-old\-new\-loop\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lionkingrockindia$ "https\:\/\/hike2hike\.com\/lionkingrockindia\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lionkingrockindia\.html$ "https\:\/\/hike2hike\.com\/lionkingrockindia\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lakes\-trail$ "https\:\/\/hike2hike\.com\/whittier\-ridge\-lakes\-loop" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lakes\-trail\.html$ "https\:\/\/hike2hike\.com\/whittier\-ridge\-lakes\-loop" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lakes\-trail\-day\-2\.html$ "https\:\/\/hike2hike\.com\/whittier\-ridge\-lakes\-loop\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lakekelcemasnowshoe$ "https\:\/\/hike2hike\.com\/lake\-kelcema\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lakekelcemasnowshoe\.html$ "https\:\/\/hike2hike\.com\/lake\-kelcema\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lake\-ann$ "https\:\/\/hike2hike\.com\/lake\-ann\-hike\-baker\-highway\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lake\-ann\.html$ "https\:\/\/hike2hike\.com\/lake\-ann\-hike\-baker\-highway\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lake22\-92819$ "https\:\/\/hike2hike\.com\/lake\-twenty\-two\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lake22\-92819\.html$ "https\:\/\/hike2hike\.com\/lake\-twenty\-two\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lake\-221$ "https\:\/\/hike2hike\.com\/lake\-twenty\-two\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lake\-221\.html$ "https\:\/\/hike2hike\.com\/lake\-twenty\-two\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lake\-22$ "https\:\/\/hike2hike\.com\/lake\-twenty\-two\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lake\-22\.html$ "https\:\/\/hike2hike\.com\/lake\-twenty\-two\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^kyespeakclimb$ "https\:\/\/hike2hike\.com\/kyes\-peak\-climb\-south\-ridge\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^kyespeakclimb\.html$ "https\:\/\/hike2hike\.com\/kyes\-peak\-climb\-south\-ridge\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^huntoonsnowshoe$ "https\:\/\/hike2hike\.com\/huntoon\-point\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^huntoonsnowshoe\.html$ "https\:\/\/hike2hike\.com\/huntoon\-point\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^heybrooklookout$ "https\:\/\/hike2hike\.com\/heybrook\-lookout\-trail\-tower\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^heybrooklookout\.html$ "https\:\/\/hike2hike\.com\/heybrook\-lookout\-trail\-tower\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^hannegan\-pass$ "https\:\/\/hike2hike\.com\/hannegan\-pass\-trail\-peak\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^hannegan\-pass\.html$ "https\:\/\/hike2hike\.com\/hannegan\-pass\-trail\-peak\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^gunn\-peak$ "https\:\/\/hike2hike\.com\/gunn\-peak\-climb\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^gunn\-peak\.html$ "https\:\/\/hike2hike\.com\/gunn\-peak\-climb\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^granitemountain$ "https\:\/\/hike2hike\.com\/granite\-mountain\-hike\-wa\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^granitemountain\.html$ "https\:\/\/hike2hike\.com\/granite\-mountain\-hike\-wa\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^gothicbasin1192019$ "https\:\/\/hike2hike\.com\/gothic\-basin\-hike\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^gothicbasin1192019\.html$ "https\:\/\/hike2hike\.com\/gothic\-basin\-hike\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^cedar\-lake$ "https\:\/\/hike2hike\.com\/cedar\-lake\-hike\-bellingham\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^cedar\-lake\.html$ "https\:\/\/hike2hike\.com\/cedar\-lake\-hike\-bellingham\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^goatlakemtnloophwy$ "https\:\/\/hike2hike\.com\/goat\-lake\-trail\-washington" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^goatlakemtnloophwy\.html$ "https\:\/\/hike2hike\.com\/goat\-lake\-trail\-washington" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^goat\-mountain$ "https\:\/\/hike2hike\.com\/goat\-mountain\-trail\-mt\-baker\-highway" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^goat\-mountain\.html$ "https\:\/\/hike2hike\.com\/goat\-mountain\-trail\-mt\-baker\-highway" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^gothic\-basin$ "https\:\/\/hike2hike\.com\/gothic\-basin\-hike\-washington" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^gothic\-basin\.html$ "https\:\/\/hike2hike\.com\/gothic\-basin\-hike\-washington" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^day\-3\-white\-pass\-pilot\-ridge\-loop$ "https\:\/\/hike2hike\.com\/white\-pass\-pilot\-ridge\-loop\-wa\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^day\-3\-white\-pass\-pilot\-ridge\-loop\.html$ "https\:\/\/hike2hike\.com\/white\-pass\-pilot\-ridge\-loop\-wa\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^alger\-alp$ "https\:\/\/hike2hike\.com\/alger\-alp\-day\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^alger\-alp\.html$ "https\:\/\/hike2hike\.com\/alger\-alp\-day\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^artist\-point\-snowshoe$ "https\:\/\/hike2hike\.com\/artist\-point\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^artist\-point\-snowshoe\.html$ "https\:\/\/hike2hike\.com\/artist\-point\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^banderamountain$ "https\:\/\/hike2hike\.com\/bandera\-mountain\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^banderamountain\.html$ "https\:\/\/hike2hike\.com\/bandera\-mountain\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^baring\-mountain\-6125\-ft$ "https\:\/\/hike2hike\.com\/mount\-baring\-scramble\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^baring\-mountain\-6125\-ft\.html$ "https\:\/\/hike2hike\.com\/mount\-baring\-scramble\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^big\-four\-ice\-caves\-122016$ "https\:\/\/hike2hike\.com\/big\-four\-ice\-caves\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^big\-four\-ice\-caves\-122016\.html$ "https\:\/\/hike2hike\.com\/big\-four\-ice\-caves\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^big\-four\-ice\-caves\-snowshoe$ "https\:\/\/hike2hike\.com\/big\-four\-ice\-caves\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^big\-four\-ice\-caves\-snowshoe\.html$ "https\:\/\/hike2hike\.com\/big\-four\-ice\-caves\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^big\-four\-ice\-caves\-snowshoe1$ "https\:\/\/hike2hike\.com\/big\-four\-ice\-caves\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^big\-four\-ice\-caves\-snowshoe1\.html$ "https\:\/\/hike2hike\.com\/big\-four\-ice\-caves\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^blackpeak$ "https\:\/\/hike2hike\.com\/black\-peak\-washington\-scramble\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^blackpeak\.html$ "https\:\/\/hike2hike\.com\/black\-peak\-washington\-scramble\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^boulderrivertrail$ "https\:\/\/hike2hike\.com\/boulder\-river\-trail\-5\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^boulderrivertrail\.html$ "https\:\/\/hike2hike\.com\/boulder\-river\-trail\-5\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^bridalveilfalls$ "https\:\/\/hike2hike\.com\/bridal\-veil\-falls\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^bridalveilfalls\.html$ "https\:\/\/hike2hike\.com\/bridal\-veil\-falls\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^church\-mountain$ "https\:\/\/hike2hike\.com\/church\-mountain\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^church\-mountain\.html$ "https\:\/\/hike2hike\.com\/church\-mountain\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^columbiapeak$ "https\:\/\/hike2hike\.com\/columbia\-peak\-climb\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^columbiapeak\.html$ "https\:\/\/hike2hike\.com\/columbia\-peak\-climb\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^day\-2\-white\-pass\-pilot\-ridge\-loop$ "https\:\/\/hike2hike\.com\/white\-pass\-pilot\-ridge\-loop\-wa\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^day\-2\-white\-pass\-pilot\-ridge\-loop\.html$ "https\:\/\/hike2hike\.com\/white\-pass\-pilot\-ridge\-loop\-wa\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^del\-campo\-6610\-ft$ "https\:\/\/hike2hike\.com\/del\-campo\-peak\-scramble\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^del\-campo\-6610\-ft\.html$ "https\:\/\/hike2hike\.com\/del\-campo\-peak\-scramble\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^dennycreeksnowshoe$ "https\:\/\/hike2hike\.com\/denny\-creek\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^dennycreeksnowshoe\.html$ "https\:\/\/hike2hike\.com\/denny\-creek\-snowshoe\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^dirtyharryspeak$ "https\:\/\/hike2hike\.com\/dirty\-harrys\-peak\-trail\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^dirtyharryspeak\.html$ "https\:\/\/hike2hike\.com\/dirty\-harrys\-peak\-trail\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^dragontailcolchuck$ "https\:\/\/hike2hike\.com\/colchuck\-peak\-dragontail\-peak\-climb\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^dragontailcolchuck\.html$ "https\:\/\/hike2hike\.com\/colchuck\-peak\-dragontail\-peak\-climb\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^eldoradopeakwashington$ "https\:\/\/hike2hike\.com\/eldorado\-peak\-climb\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^eldoradopeakwashington\.html$ "https\:\/\/hike2hike\.com\/eldorado\-peak\-climb\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^excelsior\-peak\-pass\-high\-divide$ "https\:\/\/hike2hike\.com\/excelsior\-peak\-pass\-high\-divide\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^excelsior\-peak\-pass\-high\-divide\.html$ "https\:\/\/hike2hike\.com\/excelsior\-peak\-pass\-high\-divide\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^fosslakesloop$ "https\:\/\/hike2hike\.com\/foss\-lakes\-necklace\-valley\-loop\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^fosslakesloop\.html$ "https\:\/\/hike2hike\.com\/foss\-lakes\-necklace\-valley\-loop\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^fossloopday2$ "https\:\/\/hike2hike\.com\/foss\-lakes\-necklace\-valley\-loop\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^fossloopday2\.html$ "https\:\/\/hike2hike\.com\/foss\-lakes\-necklace\-valley\-loop\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^glacierpeakclimb\-793555$ "https\:\/\/hike2hike\.com\/glacier\-peak\-climb\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^glacierpeakclimb\-793555\.html$ "https\:\/\/hike2hike\.com\/glacier\-peak\-climb\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^glacierpeakclimb$ "https\:\/\/hike2hike\.com\/glacier\-peak\-climb\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^glacierpeakclimb\.html$ "https\:\/\/hike2hike\.com\/glacier\-peak\-climb\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^goat\-mountain\-trail$ "https\:\/\/hike2hike\.com\/goat\-mountain\-trail\-mt\-baker\-highway\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^goat\-mountain\-trail\.html$ "https\:\/\/hike2hike\.com\/goat\-mountain\-trail\-mt\-baker\-highway\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^gothic\-basin\-6\-20\-2015\-to\-6\-21\-2015$ "https\:\/\/hike2hike\.com\/gothic\-basin\-hike\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^gothic\-basin\-6\-20\-2015\-to\-6\-21\-2015\.html$ "https\:\/\/hike2hike\.com\/gothic\-basin\-hike\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^salmon\-ridge\-snowshoe\.html$ "https\:\/\/hike2hike\.com\/washingtonsnowshoeing\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^shastaavalanchegulch$ "https\:\/\/hike2hike\.com\/mount\-shasta\-avalanche\-gulch\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^shastaavalanchegulch\.html$ "https\:\/\/hike2hike\.com\/mount\-shasta\-avalanche\-gulch\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^shastaavalanchegulchday2$ "https\:\/\/hike2hike\.com\/mount\-shasta\-avalanche\-gulch\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^shastaavalanchegulchday2\.html$ "https\:\/\/hike2hike\.com\/mount\-shasta\-avalanche\-gulch\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^skyline\-divide$ "https\:\/\/hike2hike\.com\/skyline\-divide\-hike\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^skyline\-divide\.html$ "https\:\/\/hike2hike\.com\/skyline\-divide\-hike\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^southsisteroregon$ "https\:\/\/hike2hike\.com\/south\-sister\-climb\-oregon\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^southsisteroregon\.html$ "https\:\/\/hike2hike\.com\/south\-sister\-climb\-oregon\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^teddy\-bear\-cove$ "https\:\/\/hike2hike\.com\/teddy\-bear\-cove\-bellingham\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^teddy\-bear\-cove\.html$ "https\:\/\/hike2hike\.com\/teddy\-bear\-cove\-bellingham\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^the\-madrone\-crest$ "https\:\/\/hike2hike\.com\/madrone\-crest\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^the\-madrone\-crest\.html$ "https\:\/\/hike2hike\.com\/madrone\-crest\-trail\-hike\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^three\-fingers\-lookout\-6850\-ft$ "https\:\/\/hike2hike\.com\/three\-fingers\-fire\-lookout\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^three\-fingers\-lookout\-6850\-ft\.html$ "https\:\/\/hike2hike\.com\/three\-fingers\-fire\-lookout\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^vesper\-peak$ "https\:\/\/hike2hike\.com\/vesper\-peak\-hike\-lake\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^vesper\-peak\.html$ "https\:\/\/hike2hike\.com\/vesper\-peak\-hike\-lake\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^vesper\-peak1$ "https\:\/\/hike2hike\.com\/vesper\-peak\-hike\-lake\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^vesper\-peak1\.html$ "https\:\/\/hike2hike\.com\/vesper\-peak\-hike\-lake\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^vesperlake$ "https\:\/\/hike2hike\.com\/vesper\-peak\-hike\-lake\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^vesperlake\.html$ "https\:\/\/hike2hike\.com\/vesper\-peak\-hike\-lake\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^vesperpeakscramble2$ "https\:\/\/hike2hike\.com\/vesper\-peak\-hike\-lake\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^pct\-j\-day\-5\-section$ "https\:\/\/hike2hike\.com\/pct\-section\-j\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^pct\-j\-day\-6\-section$ "https\:\/\/hike2hike\.com\/pct\-section\-j\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^pct\-j\-day\-6\-section\.html$ "https\:\/\/hike2hike\.com\/pct\-section\-j\-washington\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^rainieremmonsclimb$ "https\:\/\/hike2hike\.com\/mount\-rainier\-emmons\-route\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^rainieremmonsclimb\.html$ "https\:\/\/hike2hike\.com\/mount\-rainier\-emmons\-route\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^saddle\-lake\-and\-goat\-flats$ "https\:\/\/hike2hike\.com\/three\-fingers\-fire\-lookout\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^saddle\-lake\-and\-goat\-flats\.html$ "https\:\/\/hike2hike\.com\/three\-fingers\-fire\-lookout\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^mt\-st\-helens\.html$ "https\:\/\/hike2hike\.com\/worm\-flows\-route\-saint\-helens\/" [R=301,L]
+
+RewriteOptions inherit
+RewriteCond %{HTTP_HOST} ^hike2hike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hike2hike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^hike2hike\.com\/mtbakereastonday2$ "http\:\/\/www\.hike2hike\.com\/mtbakereastonroute\-853273\-463497" [R=301,L]
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType image/jpg "access plus 6 hours"
+	ExpiresByType image/jpeg "access plus 6 hours"
+	ExpiresByType image/gif "access plus 6 hours"
+	ExpiresByType image/png "access plus 6 hours"
+	ExpiresByType text/css "access plus 6 hours"
+	ExpiresByType application/pdf "access plus 1 week"
+	ExpiresByType text/javascript "access plus 6 hours"
+	ExpiresByType text/html "access plus 5 minutes"
+	ExpiresByType image/x-icon "access plus 1 year"
+	ExpiresDefault "access plus 3 hours"
+</IfModule>
+<ifModule mod_headers.c>
+Header set X-Endurance-Cache-Level "2"
+</ifModule>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+RewriteCond %{HTTP_HOST} ^hike2hike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hike2hike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lake22\-92819$ "https\:\/\/hike2hike\.com\/lake\-twenty\-two\-trail\-hike" [R=301,L]
+RewriteCond %{HTTP_HOST} ^hike2hike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hike2hike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^lake22\-82415$ "https\:\/\/hike2hike\.com\/lake\-twenty\-two\-trail\-hike" [R=301,L]
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^home\.html$ "http\:\/\/www\.hike2hike\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^pct\-j\-day\-5\-section\.html$ "https\:\/\/hike2hike\.com\/pct\-section\-j\-washington\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^wallacefalls\.html$ "https\:\/\/hike2hike\.com\/wallace\-falls\-trail\-washington\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^wallacefalls$ "https\:\/\/hike2hike\.com\/wallace\-falls\-trail\-washington\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^vesperpeakscramble2\.html$ "https\:\/\/hike2hike\.com\/vesper\-peak\-hike\-lake\-washington\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^pct\-section\-j\.html$ "https\:\/\/hike2hike\.com\/pct\-section\-j\-washington\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^pct\-section\-j$ "https\:\/\/hike2hike\.com\/pct\-section\-j\-washington\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^perrycreekfalls\.html$ "https\:\/\/hike2hike\.com\/perry\-creek\-falls\-mountain\-loop\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^perrycreekfalls$ "https\:\/\/hike2hike\.com\/perry\-creek\-falls\-mountain\-loop\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^white\-pass\-\-\-\-pilot\-ridge\-loop\.html$ "https\:\/\/hike2hike\.com\/white\-pass\-pilot\-ridge\-loop\-wa\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^hiketohike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hiketohike\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^white\-pass\-\-\-\-pilot\-ridge\-loop$ "https\:\/\/hike2hike\.com\/white\-pass\-pilot\-ridge\-loop\-wa\/" [R=301,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
+RewriteCond %{HTTP_HOST} ^hike2hike\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hike2hike\.com$
+RewriteRule ^alger\-alp\-day\-hike\/$ "https\:\/\/hike2hike\.com\/alger\-alp\-day\-hike\.html" [R=301,L]
