@@ -440,47 +440,6 @@ input[type="email"]::placeholder{
   text-align: right;
 }
 
-#zipcode{
-  margin-bottom: 40px;
-  max-width: 100px;
-}
-.newsletter-choice{
-  color: lightgrey;
-  margin-top: 0;
-}
-
-.checkbox-list{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.check-list-item{
-  display: flex;
-  margin-top: 10px;
-}
-.checkbox-label{
-  order: 10;
-}
-.checkbox{
-  height: 11px;
-  width: 11px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-input[type="radio"]{
-  width: auto;
-  height: auto;
-}
-.radio{
-  margin-right: 10px;
-}
-.radios{
-  display: flex;
-  flex-direction: column;
-}
 .textarea{
   display: flex;
   flex-direction: column;
@@ -494,7 +453,7 @@ input[type="radio"]{
 }
 
 .btn-div{
-  max-width: 80%;
+  max-width: 100%;
   display: flex;
   margin: 0 auto;
   align-content: center;
@@ -505,11 +464,12 @@ input[type="radio"]{
   background-color:#44c78e;
   margin: 0 auto;
   border: none;
-  width: 85%;
-  padding: 20px;
-  margin: 20px auto;
+  border-radius: 20px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px auto;
   flex-grow: initial;
-  font-size: 2rem;
+  font-size: 3vh;
   border-radius: 3%;
 }
 
