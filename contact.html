@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="utf-8">
+  <title>Contact Me | Abrahm Rollins</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+  </head>
 </head>
 <body>
-    
+    <!--Site Nav Bar-->
+    <div class="mainNav" id="mainNav">
+        <div class="nav-bar">
+          <div class="name">Abrahm Rollins</div>
+          <!--Mobile Menu Icon-->
+          <img class="menu-icon" id="menuButton" onclick="toggleMenu()" src="images/htmlIcon.png"/>
+          <!--Large Screen Menu-->
+          <ul class="nav">
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="projects.html">Projects</a></li>
+            <li><a class="nav-link" href="contact.html">contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Mobile Menu Drop Down-->
+      <div class="side-bar" id="sideBar" >
+        <div class="mobile-slide-out" id="mobileSlideOut">
+          <div id="myDropdown" class="dropdown-content">
+            <a class="slide-link" href="index.html">Home</a>
+            <a class="slide-link" href="projects.html">Projects</a>
+            <a class="slide-link" href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <!--Header Area-->
+      <header class="page-header contact">
+        
+      </header>
+
+      <!--Footer Area-->
+      <footer>
+      <ul>
+        <li><a href="https://www.instagram.com/hiketohike.ig/" target="_blank" class="social instagram">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/abrahmrollins/" target="_blank" class="social linkedin">LinkedIn</a></li>
+        <li><a href="https://github.com/OneWaterboy" target="_blank" class="social github">Github</a></li>
+        <li><a href="https://codepen.io/TheWaterboy" target="_blank" class="social codepen">codepen</a></li>
+      </ul>
+      <p class="copyright">Copyright 2020, Waterboy Productions</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
