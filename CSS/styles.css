@@ -360,8 +360,9 @@ a.social:hover {
 .contact-layout {
   display: grid;
   width: 90%;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2, 1fr;
   margin: 0 auto;
+  
 }
 
 /*Contact Form */
@@ -464,13 +465,12 @@ input[type="email"]::placeholder{
   background-color:#44c78e;
   margin: 0 auto;
   border: none;
-  border-radius: 20px;
   width: 100%;
   padding: 10px;
   margin: 10px auto;
   flex-grow: initial;
   font-size: 3vh;
-  border-radius: 3%;
+  border-radius: 10%;
 }
 
 .copyright{
@@ -550,7 +550,6 @@ select:focus{
     display: block;
     margin-right: 10%;
   }
-  
 }
 
 @media screen and (max-width: 600px) {
