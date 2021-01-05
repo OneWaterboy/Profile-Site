@@ -172,18 +172,20 @@ footer ul li {
 .social-div {
   display: block;
   position: fixed;
-  bottom: 2vh;
-  width: 100%;
+  bottom: 0;
   margin: 0 auto;
+  width: 100%;
 }
+
 a.social {
   display: inline-block;
   text-indent: -9999px;
   margin-left: 5px;
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
-  opacity: .4;
+  width: 35px;
+  height: 35px;
+  background-size: 35px 35px;
+  
+  
   transition: all .5s;
 }
 a.instagram {
@@ -217,7 +219,6 @@ a.social:hover {
 
 .home-intro {
   max-width: 60%;
-  font-weight: bold;
   margin: 50px auto;
 }
 
@@ -398,6 +399,10 @@ a.social:hover {
   .project-link {
     font-size: 2vw;
   }
+
+  .project-description {
+    font-size: 2vw;
+  }
 }
 @media screen and (max-width: 768px){
 
@@ -411,7 +416,6 @@ a.social:hover {
     display: block;
     margin-right: 10%;
   }
-  
   
 }
 

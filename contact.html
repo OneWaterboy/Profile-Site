@@ -4,7 +4,8 @@
 <meta charset="utf-8">
   <title>Contact Me | Abrahm Rollins</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/styles.css" type="text/css">
+  <link rel="stylesheet" href="CSS/signupformstyles.css" type="text/css">
   <!--Google Fonts-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
@@ -26,9 +27,9 @@
             <li><a class="nav-link" href="contact.html">contact</a></li>
           </ul>
         </div>
-      </div>
+    </div>
       <!-- Mobile Menu Drop Down-->
-      <div class="side-bar" id="sideBar" style="display: none;">
+    <div class="side-bar" id="sideBar" style="display: none;">
         <div class="mobile-slide-out" id="mobileSlideOut">
           <div id="myDropdown" class="dropdown-content">
             <a class="slide-link" href="index.html">Home</a>
@@ -36,19 +37,53 @@
             <a class="slide-link" href="contact.html">Contact</a>
           </div>
         </div>
-      </div>
-      <!--Header Area-->
-      <header class="page-header contact">
+    </div>
+    <!--Header Area-->
+    <header class="page-header contact">
         
-      </header>
-      <div class="social-div">
+    </header>
+    <div class="contact-layout">
+        <form class="contact-form">
+            <fieldset>
+                <legend class="form-title">Contact Information</legend>
+                <div class="input-div">
+                    <label class="input-label" for="name">Full Name</label>
+                    <input class="input-box" type="text" id="name" name="name" placeholder="Intoroduce Yourself" required>
+                </div>
+                <div class="input-div">
+                    <label class="input-label" for="email">Email Address</label>
+                    <input class="input-box" type="email" id="email" name="email" placeholder="Required" required>
+                </div>
+                <div class="input-div">
+                    <label class="input-label" for="phone">Phone Number</label>
+                    <input class="input-box" type="tel" id="phone" name="phone" placeholder="ex.(555)555-5555">
+                </div>
+                <div class="input-div">
+                    <label class="input-label" for="address">Street Address</label>
+                    <input class="input-box" type="text" id="address" name="address">
+                </div>
+                <div class="input-div">
+                    <label class="input-label" for="city">City</label>
+                    <input class="input-box" type="text" id="city" name="city" placeholder="Timbuktu">
+                </div>
+                <div class="input-div">
+                    <label class="input-label" for="zipcode">Zipcode</label>
+                    <input class="input-box" type="text" id="zipcode" name="zipcode" maxlength=5 required>
+                </div>
+            </fieldset>
+        </form>
+        <div>
+            
+        </div>
+    </div>
+    <div class="social-div">
         <a href="https://www.instagram.com/hiketohike.ig/" target="_blank" class="social instagram">Twitter</a>
         <a href="https://www.linkedin.com/in/abrahmrollins/" target="_blank" class="social linkedin">LinkedIn</a>
         <a href="https://github.com/OneWaterboy" target="_blank" class="social github">Github</a>
         <a href="https://codepen.io/TheWaterboy" target="_blank" class="social codepen">codepen</a>
-      </div>
-      <!--Footer Area-->
-      <footer>
+    </div>
+    <!--Footer Area-->
+    <footer>
       <p class="copyright">Copyright 2020, Waterboy Productions</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
