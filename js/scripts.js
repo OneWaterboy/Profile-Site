@@ -24,8 +24,4 @@ function toggleMenu () {
   } else {
     codeButton.style.display = "none";
   }
-  var navbar = getElementById.getElementById("mainNav")
-  if (codeButton.style.display = "block"){
-    navBar.style.backgroundColor = rgba(0,0,0,0.9);
-  }
 }

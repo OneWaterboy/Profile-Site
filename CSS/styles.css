@@ -55,7 +55,7 @@ a:hover {
   align-items: flex-end;
 }
 
-.menu-icon-yellow {
+.menu-icon {
   display: none;
   padding: 4px;
   max-height: 100%;
@@ -97,9 +97,8 @@ a:hover {
   width: 100%;
   background-color: rgba(0,0,0,0.9);
   text-align: center;
-  z-index: 10000000;
+  z-index: 99;
   position: fixed;
-  top: 7vh;
   display: none;
   transition: 0.7s ease;
 }
@@ -383,21 +382,19 @@ a.social:hover {
   .home-welcome {
     margin-left: 2vw;
   }
+  .nav {
+    display: none;
+  }
+  .menu-icon{
+    display: block;
+    margin-right: 10%;
+  }
+  
   
 }
 
 @media screen and (max-width: 600px) {
 
-  .nav {
-    display: none;
-  }
-  .menu-icon-yellow{
-    display: block;
-    margin-right: 10%;
-  }
-  .container {
-    width: 100%;
-  }
   
   .name {
     margin: 0 auto;

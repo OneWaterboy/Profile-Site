@@ -18,12 +18,24 @@
     <div class="mainNav" id="mainNav">
       <div class="nav-bar">
         <div class="name">Abrahm Rollins</div>
-        <img class="menu-icon-yellow" src="images/htmlIcon-small.png"/>
+        <!--Mobile Menu Icon-->
+        <img class="menu-icon" id="menuButton" onclick="toggleMenu()" src="images/htmlIcon.png"/>
+        <!--Large Screen Menu-->
         <ul class="nav">
           <li><a class="nav-link" href="index.html">Home</a></li>
           <li><a class="nav-link" href="projects.html">Projects</a></li>
           <li><a class="nav-link" href="contact.html">contact</a></li>
         </ul>
+      </div>
+    </div>
+    <!-- Mobile Menu Drop Down-->
+    <div class="side-bar" id="sideBar" >
+      <div class="mobile-slide-out" id="mobileSlideOut">
+        <div id="myDropdown" class="dropdown-content">
+          <a class="slide-link" href="index.html">Home</a>
+          <a class="slide-link" href="projects.html">Projects</a>
+          <a class="slide-link" href="contact.html">Contact</a>
+        </div>
       </div>
     </div>
     <!--Page Header-->
@@ -57,7 +69,7 @@
                 <p> Languages used HTML, CSS, PHP (Form Submission) and Javascipt</p>
                 <a href="https://github.com/OneWaterboy/north-county-towing" class="project-link">See The Code</a>
                 <br>
-                <a href="www.ncountytowing.com" class="project-link" target="_blank" target="_blank">Visit The Site</a>
+                <a href="https://ncountytowing.com" class="project-link" target="_blank" target="_blank">Visit The Site</a>
               </div>
             </div>
           </div>
