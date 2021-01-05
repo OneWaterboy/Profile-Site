@@ -36,20 +36,33 @@ a:hover {
   transition: background 0.5s;
 }
 
-.nav {
+.nav-bar {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   font-weight: 700;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
-  max-width: 80%;
+  width: 80%;
+  
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  list-style-type: none;
+  align-items: flex-end;
 }
 
 .menu-icon-yellow {
   display: none;
+  padding: 4px;
   max-height: 100%;
-  width: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 15%;
+  background: whitesmoke;
 }
 
 .name {
@@ -58,7 +71,6 @@ a:hover {
   display: block;
   margin-right: auto;
   color: white;
-
 }
 .nav li {
   padding: 5px 10px 10px 10px;
@@ -300,7 +312,11 @@ a.social:hover {
 
 
 @media screen and (max-width: 1025px) {
-
+  
+  
+  .nav-bar {
+    width: 100%;
+  }
   .header-intro {
     margin-left: 2vw;
     color: whitesmoke;
@@ -339,20 +355,23 @@ a.social:hover {
     margin-left: 2vw;
   }
   
-  .nav {
-    max-width: 100%;
-  }
   
   
 }
 
 @media screen and (max-width: 600px) {
 
-  .nav-link {
+  
+  .nav {
     display: none;
+
   }
   .menu-icon-yellow{
-    display: flex;
+    display: block;
+    margin-right: 10%;
+  }
+  .hamburger {
+    align-items: flex-end;
   }
   .name {
     margin: 0 auto;
