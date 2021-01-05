@@ -93,19 +93,22 @@ a:hover {
 }
 
 .side-bar{
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   background-color: rgba(0,0,0,0.9);
   text-align: center;
   z-index: 10000000;
   position: fixed;
-  top: 10vh;
+  top: 7vh;
+  display: none;
+  transition: 0.7s ease;
 }
 
 .dropdown-content {
   display: flex;
   flex-direction: column;
   margin-top: 15vh;
+  justify-content: space-between;
 }
 
 .slide-link {
