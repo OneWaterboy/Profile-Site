@@ -100,7 +100,7 @@ a:hover {
   text-align: center;
   z-index: 99;
   position: fixed;
-  display: none;
+  
   transition: 0.7s ease;
 }
 
@@ -145,7 +145,7 @@ header .profile-image:hover {
   transform: scale(1.5) rotate(360deg);
 }
 
-
+/* footer Area */
 footer {
   width: 100%;
   min-height: 30px;
@@ -154,8 +154,7 @@ footer {
 
 .copyright {
   top: -8px;
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 0.75em;
 }
 
 footer ul {
@@ -168,6 +167,15 @@ footer ul li {
   display: inline-block;
 }
 
+
+/* social Links*/
+.social-div {
+  display: block;
+  position: fixed;
+  bottom: 2vh;
+  width: 100%;
+  margin: 0 auto;
+}
 a.social {
   display: inline-block;
   text-indent: -9999px;
