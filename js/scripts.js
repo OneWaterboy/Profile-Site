@@ -15,14 +15,13 @@ $(document).ready(function(){
 });
 
 
-//Create Hamburger Drop Down
+//Create Mobile Menu
 
-var dropDownMenu = document.querySelector(".navbar")
-var hideMenu = document.querySelector(".ham")
-
-ham.addEventListener("click", toggleHamburger)
-
-function toggleHamburger(){
-    navbar.classList.toggle("showNav")
-    ham.classList.toggle("showClose")
+function toggleMenu () {
+  var codeButton = document.getElementById("sideBar");
+  if (codeButton.style.display === "none") {
+    codeButton.style.display = "block";
+  } else {
+    codeButton.style.display = "none";
   }
+}
