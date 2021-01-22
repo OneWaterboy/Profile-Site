@@ -327,7 +327,7 @@ a.social:hover {
 }
 
 .overlay-contents {
-  height: auto;
+  height: 100%;
   width: auto;
   margin: 15% auto;
   display: flex;
