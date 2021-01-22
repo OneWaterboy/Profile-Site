@@ -2,7 +2,8 @@
 * { 
   box-sizing: border-box;
 }
-  
+
+
 body {
   margin: 0;
   padding: 0;
@@ -255,6 +256,20 @@ a.social:hover {
   font-size: 1.5rem;
 }
 
+.home-btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-page-btn {
+  margin: 0.2rem;
+  width: 50%;
+  border-radius: 2rem;
+  padding: 0.3rem;
+  font-weight: 700;
+  font-family: 'Imbue', serif;
+  font-size: 1.5rem;
+}
 
 
 
@@ -265,10 +280,11 @@ a.social:hover {
 
 .project-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto, 1fr);
-  row-gap: 2vh;
-  max-width: 60%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2vh;
+  width: 80%;
   margin: 10vh auto;
+  align-items: center;
 }
 
 .projects {
@@ -300,6 +316,11 @@ a.social:hover {
   margin: 0 auto
 }
 
+.code-links {
+  margin: 0 auto;
+  display: block;
+}
+
 .project-card:hover .project-overlay {
   bottom: 0;
   height: 100%;
@@ -309,6 +330,8 @@ a.social:hover {
   height: auto;
   width: auto;
   margin: 15% auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-description {
@@ -344,9 +367,23 @@ a.social:hover {
   margin-left: auto;
   margin-right: auto;
   text-decoration: underline;
-
 }
 
+.project-desc-link {
+  font-family: 'Imbue', serif;
+  color: darkgreen;
+  text-decoration: none;
+}
+
+.project-desc-link:hover::before{
+  content: '< ';
+  color: green;
+  text-decoration: none;
+}
+.project-desc-link:hover::after {
+  content: ' />';
+  color: green;
+}
 /* ===============================================
          Contact Page Styling 
 =================================================*/
@@ -523,6 +560,7 @@ select:focus{
   }
 
   .overlay-contents {
+    
     margin: 0 auto;
   }
 
@@ -536,6 +574,12 @@ select:focus{
 
   .project-description {
     font-size: 2vw;
+  }
+  .project-card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  p {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 768px){
