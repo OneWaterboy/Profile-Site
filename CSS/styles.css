@@ -213,6 +213,31 @@ a.social:hover {
          Home Page Styling 
 =================================================*/
 
+#opening-overlay {
+  height: 100%;
+  width: 100vw;
+  background-color: #E5E4E2;
+  position: fixed;
+  z-index: 999999999999999999;
+  font-family: 'Londrina Solid', cursive;
+}
+
+.overlay-div {
+  display: block;
+  margin: 25% auto;
+}
+
+#overlay-header {
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 0%;
+}
+
+#overlay-tagline {
+  font-weight: 100;
+  font-size: 2rem;
+}
+
 .home {
   background: url('../images/header\ sunrise.jpg') no-repeat top center;
   background-size: cover;
