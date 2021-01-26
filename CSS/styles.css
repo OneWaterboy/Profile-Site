@@ -236,7 +236,16 @@ a.social:hover {
 #overlay-tagline {
   font-weight: 100;
   font-size: 2rem;
+  opacity: 0.0;
+  animation: fadeIn ease 1s 8s;
+  -webkit-animation: fadeIn ease 8s;
 }
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
 
 .home {
   background: url('../images/header\ sunrise.jpg') no-repeat top center;
@@ -287,13 +296,17 @@ a.social:hover {
 }
 
 .home-page-btn {
-  margin: 0.2rem;
+  color: black;
+  margin: 0.5rem;
   width: 50%;
   border-radius: 2rem;
-  padding: 0.3rem;
+  padding: 0.5rem;
   font-weight: 700;
   font-family: 'Imbue', serif;
   font-size: 1.5rem;
+  background-color: whitesmoke;
+  text-align: center;
+  box-shadow: 5px 5px 1px;
 }
 
 

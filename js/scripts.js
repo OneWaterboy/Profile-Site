@@ -40,3 +40,5 @@ function typeText() {
     setTimeout(typeText, speed);
   }
 }
+
+$('#opening-overlay').delay(5000).hide(800);
