@@ -25,3 +25,18 @@ function toggleMenu () {
     codeButton.style.display = "none";
   }
 }
+
+
+//Main Page load overlay text effect
+
+var i = 0;
+var heading = 'Hi! I\'m Abrahm Rollins';  
+var speed = 100; 
+
+function typeText() {
+  if (i < heading.length) {
+    document.getElementById('overlay-header').innerHTML += heading.charAt(i);
+    i++;
+    setTimeout(typeText, speed);
+  }
+}
