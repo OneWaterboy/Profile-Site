@@ -12,18 +12,7 @@ body {
   color: #222;
   background: #f7f5f0;
 }
-/* Link Styles */
 
-a {
-  color: darkgreen;
-  text-decoration: none;
-  
-}
-
-a:hover {
-  color: rgb(18, 2, 121, 0.5);
-  transition: all 0.4s;
-}
 
 /* Section Styles */
 
@@ -229,13 +218,13 @@ a.social:hover {
 
 #overlay-header {
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 0%;
 }
 
 #overlay-tagline {
   font-weight: 100;
-  font-size: 2rem;
+  font-size: 1.5rem;
   opacity: 0.0;
   animation: fadeIn ease 1s 8s;
   -webkit-animation: fadeIn ease 8s;
@@ -288,25 +277,6 @@ a.social:hover {
 .action-call {
   font-style: italic;
   font-size: 1.5rem;
-}
-
-.home-btns {
-  display: flex;
-  flex-direction: column;
-}
-
-.home-page-btn {
-  color: black;
-  margin: 0.5rem;
-  width: 50%;
-  border-radius: 2rem;
-  padding: 0.5rem;
-  font-weight: 700;
-  font-family: 'Imbue', serif;
-  font-size: 1.5rem;
-  background-color: whitesmoke;
-  text-align: center;
-  box-shadow: 5px 5px 1px;
 }
 
 
