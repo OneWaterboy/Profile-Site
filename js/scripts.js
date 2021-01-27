@@ -30,7 +30,7 @@ function toggleMenu () {
 //Main Page load overlay text effect
 
 var i = 0;
-var heading = 'Hi! I\'m Abrahm Rollins';  
+var heading = 'Hi! I\'m Abrahm';  
 var speed = 100; 
 
 function typeText() {
@@ -42,3 +42,6 @@ function typeText() {
 }
 
 $('#opening-overlay').delay(5000).hide(800);
+
+//homepage buttons for navigation
+

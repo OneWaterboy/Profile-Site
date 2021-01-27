@@ -203,10 +203,12 @@ a.social:hover {
 =================================================*/
 
 #opening-overlay {
-  height: 100%;
-  width: 100vw;
+  height: auto;
+  width: 50vw;
   background-color: #E5E4E2;
   position: fixed;
+  left: 25%;
+  top: 25%;
   z-index: 999999999999999999;
   font-family: 'Londrina Solid', cursive;
 }
