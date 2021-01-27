@@ -203,14 +203,10 @@ a.social:hover {
 =================================================*/
 
 #opening-overlay {
-  height: auto;
-  width: 50vw;
-  background-color: #E5E4E2;
-  position: fixed;
-  left: 25%;
-  top: 25%;
-  z-index: 999999999999999999;
+  background-color: transparent;
   font-family: 'Londrina Solid', cursive;
+  color: whitesmoke;
+  letter-spacing: 2px;
 }
 
 .overlay-div {
@@ -228,7 +224,7 @@ a.social:hover {
   font-weight: 100;
   font-size: 1.5rem;
   opacity: 0.0;
-  animation: fadeIn ease 1s 8s;
+  animation: fadeIn ease 8s;
   -webkit-animation: fadeIn ease 8s;
 }
 
