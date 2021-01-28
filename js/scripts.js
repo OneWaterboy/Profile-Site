@@ -43,6 +43,3 @@ function typeText() {
   }
 }
 
-
-//homepage buttons for navigation
-
