@@ -162,7 +162,7 @@ footer ul li {
 .social-div {
   display: block;
   position: fixed;
-  bottom: 0;
+  bottom: 1vw;
   margin: 0 auto;
   width: 100%;
 }
@@ -174,8 +174,6 @@ a.social {
   width: 35px;
   height: 35px;
   background-size: 35px 35px;
-  
-  
   transition: all .5s;
 }
 a.instagram {
@@ -221,16 +219,7 @@ a.social:hover {
 }
 
 #overlay-tagline {
-  font-weight: 100;
-  font-size: 1.5rem;
-  opacity: 0.0;
-  animation: fadeIn ease 8s;
-  -webkit-animation: fadeIn ease 8s;
-}
-
-@keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  display: none
 }
 
 

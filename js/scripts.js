@@ -12,6 +12,7 @@ $(document).ready(function(){
     	$(".mainNav").css("background","rgba(0,0,0,0)");
     }
   });
+  $('#overlay-tagline').fadeIn(4000);
 });
 
 
@@ -38,9 +39,8 @@ function typeText() {
   if (i < heading.length) {
     document.getElementById('overlay-header').innerHTML += heading.charAt(i);
     i++;
-    setTimeout(typeText, 200);
+    setTimeout(typeText, speed);
   }
-  $('#overlay-tagline').fadeIn(slow);
 }
 
 
