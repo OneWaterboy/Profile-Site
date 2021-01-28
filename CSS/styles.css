@@ -214,7 +214,7 @@ a.social:hover {
 
 #overlay-header {
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 4rem;
   line-height: 0%;
 }
 
@@ -247,7 +247,7 @@ a.social:hover {
 .home-welcome {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 60vw;
+  max-width: 70vw;
   margin: 50vh auto;
   align-items: center;
 }
@@ -548,9 +548,8 @@ select:focus{
   }
 
   .profile-image {
-    max-height: 100%;
     width: auto;
-    height: 40vh;
+    height: 30vh;
     
   }
 
@@ -589,6 +588,12 @@ select:focus{
     display: block;
     margin-right: 10%;
   }
+  .profile-image {
+    height: 40vh;
+  }
+  #overlay-header {
+    font-size: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -597,11 +602,8 @@ select:focus{
   .name {
     margin: 0 auto;
   }
-  .home-header {
-    font-size: 1.5rem;
-  }
-  .sub-header {
-    font-size: 0.8rem;
+  #overlay-header {
+    font-size: 2rem;
   }
 }
 
@@ -612,5 +614,14 @@ select:focus{
   }
   .name {
     font-size: 1.5rem;
+  }
+  #overlay-header {
+    font-size: 1.0rem;
+  }
+  #overlay-tagline {
+    font-size: 0.5rem;
+  }
+  .home-welcome {
+    width: 70vw;
   }
 }
