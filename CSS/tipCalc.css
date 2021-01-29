@@ -1,0 +1,102 @@
+/*==============================================
+            Main Div Styling
+==============================================*/
+
+body {
+    background-color: #2b4d15;
+    font-family: 'Goldman', cursive;
+}
+
+p, label, h1, select, input {
+    font-family: 'Goldman', cursive;
+}
+
+
+p {
+    font-size: 1.3em;
+}
+
+.calculator-div {
+    width: 80vh;
+    max-width: 80vw;
+    height: auto;
+    background-color: whitesmoke;
+    margin: 20vh auto;
+    border-radius: 20px;
+    box-shadow: 10px 5px gray;
+}
+
+.calc-header {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 20px;
+    margin-top: 2vh;
+}
+
+.inputs-div {
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.outputs-div {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-items: center;
+    margin-top: 30%;
+}
+
+
+form {
+    display: grid;
+    grid-template-columns: 60% 40% ;
+    grid-row-gap: 30%;
+}
+
+input {
+    padding-left: 5%;
+    border-radius: 5px;
+    height: 1.5em;
+}
+
+input:focus {
+    border: rgb(52, 176, 247,0.5);
+    border-radius: 5px;
+}
+
+#calculateBill {
+    max-width: 60%;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-color: black;
+    color: whitesmoke;
+    margin: 0 auto;
+    grid-column: span 2;
+    text-align: center;
+    height: 2em;
+
+}
+
+select {
+    padding-left: 5%;
+    border-radius: 5px;
+    height: 1.5em;
+}
+
+@media only screen and (max-width: 340px){
+    p {
+        font-size: 0.75em;
+    }
+    .calculator-div {
+        height: 60vh;
+    }
+    form {
+        margin-bottom: 120px;
+    }
+}

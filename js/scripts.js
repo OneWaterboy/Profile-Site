@@ -42,4 +42,3 @@ function typeText() {
     setTimeout(typeText, speed);
   }
 }
-
